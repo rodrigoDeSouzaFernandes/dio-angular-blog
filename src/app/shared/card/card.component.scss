@@ -1,0 +1,59 @@
+.card {
+  background-image: url("../../../../assets/images/universe.webp");
+  background-position: -100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem 1rem 0 0;
+  padding: 1rem;
+  box-shadow: 3px 3px 10px #c9d4e6;
+  height: max-content;
+  transition: all 0.5s;
+  overflow: hidden;
+
+  &:hover {
+    background-position: 0;
+    color: white;
+
+    img {
+        transform: scale(1.2);
+    }
+  }
+
+  & > .img-wrapper {
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      transform-origin: center;
+      transition: all .5s;
+    }
+  }
+
+  & > h3 {
+    overflow: hidden;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+  }
+
+  & > span {
+    margin-bottom: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    // width: 50%;
+
+    b {
+      display: inline-block;
+      width: 75px;
+      //   background-color: #f0f0f0;
+    }
+  }
+}
