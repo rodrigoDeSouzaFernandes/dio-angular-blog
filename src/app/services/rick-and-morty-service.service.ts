@@ -14,7 +14,10 @@ export class RickAndMortyServiceService {
     this._httpClient = httpClient;
   }
 
-  getCharacters() {
-    return this._httpClient.get<GetCharactersResponse>(this.url + '/character');
+  getCharacters(nextPageUrl?: string) {
+    if (nextPageUrl?.startsWith(this.url)) {
+      return this._httpClient.get<GetCharactersResponse>(nextPageUrl);
+    }
+    return this._httpClient.get<GetCharactersResponse>(`${this.url}/character`);
   }
 }

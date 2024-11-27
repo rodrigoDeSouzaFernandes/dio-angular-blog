@@ -2,7 +2,7 @@
     <h1>Rick and Morty WIKI</h1>
 
     <mat-form-field class="input_search" appearance="fill">
-        <mat-label>Digite seu nome</mat-label>
-        <input type="search" matInput placeholder="Nome">
+        <mat-label>Filtre por nome</mat-label>
+        <input [(ngModel)]="inputFilterByName" (input)="onFilterChange()" type="search" matInput placeholder="Nome">
     </mat-form-field>
 </header>

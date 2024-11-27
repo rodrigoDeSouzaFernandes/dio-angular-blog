@@ -1,4 +1,4 @@
 <div class="card_list">
-    <app-card *ngFor='let char of characters.results' name={{char.name}} image={{char.image}} status={{char.status}}
+    <app-card *ngFor='let char of filteredCharacters' name={{char.name}} image={{char.image}} status={{char.status}}
         gender={{char.gender}} species={{char.species}}></app-card>
 </div>
